@@ -1,8 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html class="no-js">
+<head>
 
-    <!--
+</head>
+<body>
+      <!--
     ==================================================
     Slider Section Start
     ================================================== -->
@@ -83,11 +88,10 @@
                 <div class="col-sm-4 col-xs-12">
                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
                         <div class="img-wrapper">
-                            <img src="images/lineareg.jpg" class="img-responsive" alt="this is a title" height="300" width="300">
+                            <img src="~/images/data.jfif" class="img-responsive" alt="this is a title" height="300" width="300">
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/lineareg.jpg">Demo</a>
-                                    <a target="_blank" asp-area="" asp-controller="Home" asp-action="Portfolio">Choisir</a>
+                                    <a target="_blank" asp-area="" asp-controller="Home" asp-action="Statistique">VOIR</a>
 
                                 </div>
                             </div>
@@ -95,7 +99,7 @@
                         <figcaption>
                             <h4>
                                 <a href="#">
-                                    Regression linéaire
+                                    Voir l'analyse du jeu de données
                                 </a>
                             </h4>
                             <p>
@@ -108,18 +112,17 @@
                 <div class="col-sm-4 col-xs-12">
                     <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="img-wrapper">
-                            <img src="images/arbredec.png" class="img-responsive" alt="this is a title" height="300" width="300">
+                            <img src="~/images/tea.jfif" class="img-responsive" alt="this is a title" height="300" width="300">
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/arbredec.png">Demo</a>
-                                    <a target="_blank" href="single-portfolio.html">Choisir</a>
+                                    <a target="_blank" href="single-portfolio.html">voir</a>
                                 </div>
                             </div>
                         </div>
                         <figcaption>
                             <h4>
                                 <a href="#">
-                                    Arbre de décision
+                                    Voir la méthode analytique implémentée par notre équipe
                                 </a>
                             </h4>
                             <p>
@@ -145,11 +148,11 @@
                 <div class="col-sm-4 col-xs-12">
                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
                         <div class="img-wrapper">
-                            <img src="images/lineareg.jpg" class="img-responsive" alt="this is a title" height="300" width="300">
+                            <img src="~/images/lineareg.jpg" class="img-responsive" alt="this is a title" height="300" width="300">
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a rel="gallery" class="fancybox" href="images/lineareg.jpg">Demo</a>
-                                    <a target="_blank" href="single-portfolio.html">Choisir</a>
+                                    <a rel="gallery" class="fancybox" href="~/images/lineareg.jpg">Demo</a>
+                                    <a target="_blank" asp-area="" asp-controller="Home" asp-action="Portfolio">Choisir</a>
                                 </div>
                             </div>
                         </div>
@@ -319,5 +322,8 @@
             </div>
         </div>
     </section>
+
+</body>
+  
 
   

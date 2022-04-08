@@ -31,6 +31,13 @@ namespace projetbdtnS8.Controllers
         {
             return View();
         }
+        public IActionResult Statistique()
+        {
+            return View();
+        }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

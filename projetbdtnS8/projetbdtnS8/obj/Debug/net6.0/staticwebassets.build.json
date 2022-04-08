@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MFUnSociDWrx2i5JKpy/Ezzg0Hdr1uTDJMTiTRkAAKo=",
+  "Hash": "Tzr3szA8FATFpXBWXf1FsC0Mw9cnuieDCOVkj0MM57A=",
   "Source": "projetbdtnS8",
   "BasePath": "_content/projetbdtnS8",
   "Mode": "Default",
@@ -646,6 +646,23 @@
       "OriginalItemSpec": "wwwroot\\images\\clusth.png"
     },
     {
+      "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\data.jfif",
+      "SourceId": "projetbdtnS8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\",
+      "BasePath": "_content/projetbdtnS8",
+      "RelativePath": "images/data.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\data.jfif"
+    },
+    {
       "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\icons\\close.png",
       "SourceId": "projetbdtnS8",
       "SourceType": "Discovered",
@@ -867,6 +884,23 @@
       "OriginalItemSpec": "wwwroot\\images\\math.jpg"
     },
     {
+      "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\matriceconfusion.PNG",
+      "SourceId": "projetbdtnS8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\",
+      "BasePath": "_content/projetbdtnS8",
+      "RelativePath": "images/matriceconfusion.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\matriceconfusion.PNG"
+    },
+    {
       "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\microscope.jfif",
       "SourceId": "projetbdtnS8",
       "SourceType": "Discovered",
@@ -1037,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot\\images\\slider.jpg"
     },
     {
+      "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\tea.jfif",
+      "SourceId": "projetbdtnS8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\",
+      "BasePath": "_content/projetbdtnS8",
+      "RelativePath": "images/tea.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tea.jfif"
+    },
+    {
       "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\team.jpg",
       "SourceId": "projetbdtnS8",
       "SourceType": "Discovered",
@@ -1120,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\team\\team-4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\images\\téléchargement.jfif",
+      "SourceId": "projetbdtnS8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\",
+      "BasePath": "_content/projetbdtnS8",
+      "RelativePath": "images/téléchargement.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\téléchargement.jfif"
     },
     {
       "Identity": "C:\\Users\\dfsftrffxcxccccvvvvf\\source\\repos\\projetbdtnS8\\projetbdtnS8\\wwwroot\\js\\bootstrap.min.js",
