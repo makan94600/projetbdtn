@@ -8,12 +8,10 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\Connexion.cshtml" />
-    <Content Remove="Views\Home\Index45.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Views\Home\Connexion.cshtml" />
-    <None Include="Views\Home\Index45.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

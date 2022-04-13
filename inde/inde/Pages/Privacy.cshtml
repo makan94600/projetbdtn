@@ -1,0 +1,29 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+
+@if (Model.hasData)
+    {
+        <p>Hello @Model.firstName </p>
+    }
+
+
+    <div class="container"> 
+    <form method="post" >
+    
+    <label for="fname">First name</label><br />
+    <input type="text" id="fname" name="firstname" />
+
+
+    <label for="message"> Message </label><br />
+    <textarea type="text" id="message" name="message" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit" class="submit" />
+    </form>
+</div>

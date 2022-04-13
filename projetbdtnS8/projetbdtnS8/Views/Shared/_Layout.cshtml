@@ -65,9 +65,10 @@
                     
                     <!-- logo -->
                     <div class="navbar-brand">
+
                         <a target="_blank" asp-area="" asp-controller="Home" asp-action="Index">
                             <img src="~/images/logoesigelec.png" alt=""  width="100">
-                        </a>
+                         </a>
                     </div>
                     <!-- /logo -->
                 </div>
@@ -75,9 +76,7 @@
                 <nav class="" role="navigation">
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
                                 <a target="_blank" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            
                         </ul>
                     </div>
                 </nav>
@@ -91,6 +90,22 @@
             @RenderBody() 
         </main>
     </div>
+
+        <section id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                            Un problème avec notre programme ?</h2>
+                            <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Contactez par mail ou téléphone notre support technique</p>
+                            <a href="" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contactez-nous</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <footer class="border-top footer text-muted">
         <div class="container">

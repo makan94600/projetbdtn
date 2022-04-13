@@ -1,0 +1,27 @@
+﻿@page
+@model projetbdtnS8.Views.Home.AboutModel
+@{
+}
+
+
+@if (!string.IsNullOrEmpty(Model.hasData))
+    {
+        <p>Hello  </p>
+    }
+
+
+    <div class="container"> 
+    <form method="post" >
+    
+    <label for="fname">First name</label><br />
+    <input type="text" id="fname" name="firstname" />
+
+
+    <label for="message"> Message </label><br />
+    <textarea type="text" id="message" name="message" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit" class="submit" />
+    </form>
+</div>
+
+

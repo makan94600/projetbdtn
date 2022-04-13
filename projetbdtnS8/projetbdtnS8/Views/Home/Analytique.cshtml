@@ -1,0 +1,147 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    
+    </head>
+    <body>
+
+==================================================
+Global Page Section Start
+================================================== -->
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>La méthode analytique</h2>
+                    <div class="portfolio-meta">
+                       <span> Jeu de données: La logistique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#Page header-->
+
+
+
+<section id="service-page" class="pages service-page">
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <div class="block">
+                    <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">Tester la méthode analytique sur quelques epc...</h2>
+                    <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">Ci-dessous vous pourrez tester la méthode analytique.La méthode peut pour le moment être testée pour 3 epc. Il sera possible de la tester pour chaque epc quand les resultats seront tous mis dans la base de donnée.</p>
+                    
+                    <div class="row service-parts">
+
+                        
+                        <!-- informations de l'epc 100 -->
+
+                        <!-- informations de l'epc 101 -->
+
+                        <!------------------------------------------>
+                        <form action="formanalytique" method="post">
+                          <label for="epc">Choose an epc:</label>
+                          <select id="cars" name="epc">
+                            <option value="epc_100">epc_100</option>
+                            <option value="epc_101">epc_101</option>
+                            <option value="epc_102">epc_102</option>
+                            <option value="epc_103">epc_103</option>
+                          </select><br />
+
+                           <label for="time">Choose a time:</label>
+                          <select id="cars" name="time">
+                            <option value="18:35:00">18:35:00</option>
+                            <option value="18:35:10">18:35:10</option>
+                            <option value="18:35:20">18:35:20</option>
+                            <option value="18:35:30">18:35:30</option>
+                          </select><br />
+                          <input type="submit">
+                        </form>
+
+                        <h4 style="color:grey">
+                            <b>Vous avez choisi d'appliquer la méthode analytique sur l'epc :</b>    @ViewBag.Name<br />
+                            <b>A l' heure ':</b>  @ViewBag.heure <br />
+                            <b>pour ces parmaètres l'epc avait la position:</b> @ViewBag.resultat <br />
+                        </h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+       
+
+            <!--
+            ==================================================
+            Footer Section Start
+            ================================================== -->
+            <footer id="footer">
+                <div class="container">
+                    <div class="col-md-8">
+                        <p class="copyright">Copyright: <span><script>document.write(new Date().getFullYear())</script></span> Design and Developed by <a href="http://www.Themefisher.com" target="_blank">Themefisher</a>. <br> 
+                            Get More 
+                            <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">
+                                Free Bootstrap Templates
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Social Media -->
+                        <ul class="social">
+                            <li>
+                                <a href="http://wwww.fb.com/themefisher" class="Facebook">
+                                    <i class="ion-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://wwww.twitter.com/themefisher" class="Twitter">
+                                    <i class="ion-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Linkedin">
+                                    <i class="ion-social-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://wwww.fb.com/themefisher" class="Google Plus">
+                                    <i class="ion-social-googleplus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer> <!-- /#footer -->
+
+	<!-- Template Javascript Files
+	================================================== -->
+	<!-- jquery -->
+	<script src="plugins/jQurey/jquery.min.js"></script>
+	<!-- Form Validation -->
+    <script src="plugins/form-validation/jquery.form.js"></script> 
+    <script src="plugins/form-validation/jquery.validate.min.js"></script>
+	<!-- owl carouserl js -->
+	<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="plugins/bootstrap/bootstrap.min.js"></script>
+	<!-- wow js -->
+	<script src="plugins/wow-js/wow.min.js"></script>
+	<!-- slider js -->
+	<script src="plugins/slider/slider.js"></script>
+	<!-- Fancybox -->
+	<script src="plugins/facncybox/jquery.fancybox.js"></script>
+	<!-- template main js -->
+	<script src="js/main.js"></script>
+ 	</body>
+</html>
