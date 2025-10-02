@@ -1,0 +1,77 @@
+version: 2.1
+
+executors:
+  docker-executor:
+    docker:
+      - image: cimg/base:stable
+    working_directory: ~/repo
+    # Nếu cần tài nguyên mạnh hơn khi chạy 3 container/song song:
+    # resource_class: large
+
+parameters:
+  instance:
+    type: integer
+    default: 1
+
+jobs:
+  build:
+    executor: docker-executor
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t myapp:latest .
+      - run:
+          name: Save image to workspace
+          command: |
+            docker save myapp:latest -o myapp.tar
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - myapp.tar
+
+  run-containers:
+    executor: docker-executor
+    parameters:
+      instance:
+        type: integer
+    steps:
+      - checkout
+      - setup_remote_docker
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Load image from workspace
+          command: |
+            docker load -i myapp.tar
+      - run:
+          name: Run 3 containers in parallel (15 minutes each)
+          command: |
+            echo "Running instance << parameters.instance >>"
+            pids=()
+            for i in 1 2 3; do
+              echo "Starting container $i for instance << parameters.instance >>"
+              # chạy 15 phút rồi tự dừng
+              timeout 900 docker run --rm myapp:latest &
+              pids+=($!)
+            done
+
+            status=0
+            for pid in "${pids[@]}"; do
+              wait "$pid" || status=1
+            done
+            exit $status
+
+workflows:
+  version: 2
+  build_and_run:
+    jobs:
+      - build
+      - run-containers:
+          requires:
+            - build
+          matrix:
+            parameters:
+              instance: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
