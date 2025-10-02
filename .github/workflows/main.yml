@@ -1,0 +1,67 @@
+name: Run PyAutoGUI Bot + Docker Parallel
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '*/30 * * * *'
+    
+
+jobs:
+  run-pyautogui:
+    name: Run PyAutoGUI (Windows)
+    runs-on: windows-latest
+    timeout-minutes: 13
+    strategy:
+      matrix:
+        job_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      fail-fast: false
+
+    steps:
+      - name: ⬇️ Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: ▶️ Run bot script (PyAutoGUI)
+        run: python main.py
+      - name: ▶️ Run bot script 2 (PyAutoGUI)
+        run: python main.py
+
+  run-docker:
+    name: Run Docker Containers (Ubuntu)
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        job_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      fail-fast: false
+
+    steps:
+      - name: 🐳 Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🐳 Pull Docker Image
+        run: docker pull nduythanh1/selenium-videozz-multiprocess
+
+      - name: ▶️ Run 2 Docker Containers in Parallel
+        run: |
+          docker run -d --name container1 -e JOB_ID=${{ matrix.job_id }} nduythanh1/selenium-videozz-multiprocess
+          docker run -d --name container2 -e JOB_ID=${{ matrix.job_id }} nduythanh1/selenium-videozz-multiprocess
+          docker run -d --name container3 -e JOB_ID=${{ matrix.job_id }} nduythanh1/selenium-videozz-multiprocess
+          
+          # Đợi cả 2 container hoàn tất
+          docker wait container1
+          docker wait container2
+          docker wait container3
