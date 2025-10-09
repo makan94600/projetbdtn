@@ -37,6 +37,7 @@ jobs:
     parameters:
       instance:
         type: integer
+    timeout: 15m
     steps:
       - checkout
       - setup_remote_docker
