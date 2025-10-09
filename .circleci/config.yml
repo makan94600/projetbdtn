@@ -5,6 +5,8 @@ executors:
     docker:
       - image: cimg/base:stable
     working_directory: ~/repo
+    # Nếu cần tài nguyên mạnh hơn khi chạy 3 container/song song:
+    # resource_class: large
 
 parameters:
   instance:
@@ -19,10 +21,12 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Docker image
-          command: docker build -t myapp:latest .
+          command: |
+            docker build -t myapp:latest .
       - run:
           name: Save image to workspace
-          command: docker save myapp:latest -o myapp.tar
+          command: |
+            docker save myapp:latest -o myapp.tar
       - persist_to_workspace:
           root: ~/repo
           paths:
@@ -39,23 +43,26 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
-          name: Load image
-          command: docker load -i myapp.tar
-      - run:
-          name: Run 3 containers (auto-stop after 15m)
+          name: Load image from workspace
           command: |
-            echo "🚀 Instance << parameters.instance >> running 3 containers (max 15m)"
-            # Dùng timeout để kill tất cả sau 15 phút
-            timeout 900 bash -c '
-              pids=()
-              for i in 1 2 3; do
-                echo "Starting container $i"
-                docker run --rm myapp:latest &
-                pids+=($!)
-              done
-              wait
-            '
-            echo "⏹ Containers for instance << parameters.instance >> stopped after 15m"
+            docker load -i myapp.tar
+      - run:
+          name: Run 3 containers in parallel (15 minutes each)
+          command: |
+            echo "Running instance << parameters.instance >>"
+            pids=()
+            for i in 1 2 3; do
+              echo "Starting container $i for instance << parameters.instance >>"
+              # chạy 15 phút rồi tự dừng
+              timeout 900 docker run --rm myapp:latest &
+              pids+=($!)
+            done
+
+            status=0
+            for pid in "${pids[@]}"; do
+              wait "$pid" || status=1
+            done
+            exit $status
 
 workflows:
   version: 2
@@ -68,5 +75,3 @@ workflows:
           matrix:
             parameters:
               instance: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-          # ⏱ Timeout toàn job (đặt ở cấp workflow)
-          timeout_in_minutes: 15
